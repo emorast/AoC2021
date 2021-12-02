@@ -16,6 +16,7 @@ def part1():
     list = readInput('input.txt')
     #list = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
+    prev_scan = None;
     count = 0
     for scan in list:
 
