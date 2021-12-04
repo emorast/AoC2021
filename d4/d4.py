@@ -36,7 +36,6 @@ def part1(num, matrices):
     
     noWinner = True
     for n in num:
-
         for m in matrices:
             
             if int(n) in m:
@@ -49,6 +48,7 @@ def part1(num, matrices):
                     noWinner = False
 
                     break
+        
         if not noWinner:
 
             break
@@ -63,12 +63,11 @@ def part2(num, matrices):
    
     d = {}
     i = 0
-    
     for m in matrices:
 
         d[i] = m
-
         i += 1
+
     for n in num:
         
         todelete = []
