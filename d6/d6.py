@@ -1,5 +1,4 @@
 
-
 class Lanternfish:
 
     def __init__(self, init_time):
@@ -50,7 +49,24 @@ def part1():
 
 def part2():
 
-    pass
+    input  = readInput('input.txt')
+    days = 256
+
+    tank = (dict((int(l), input.count(l)) for l in set(input)))
+    tank.update({6: 0, 7: 0, 8: 0, 0: 0})
+    
+    n = 0
+    for key in tank:
+        n += tank[key]
+    
+    tank.update({'n': n})
+
+    for i in range(days):
+
+        temp = {0: tank[1], 1: tank[2], 2: tank[3], 3: tank[4], 4: tank[5], 5: tank[6], 6: tank[7] + tank[0], 7: tank[8], 8: tank[0], 'n': tank['n'] + tank[0]}
+        tank = temp
+
+    print(tank)
 
 def main():
 
