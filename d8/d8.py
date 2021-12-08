@@ -107,7 +107,6 @@ def main():
 
                     else:
                         d[2] = j
-        print(d)
         
         nr = ''
         for x in o:
